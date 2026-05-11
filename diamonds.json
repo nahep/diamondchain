@@ -1,0 +1,112 @@
+{
+  "DC-2026-BW-00001F3084": {
+    "id": "DC-2026-BW-00001F3084",
+    "name": "Round Brilliant \u00b7 1.24ct",
+    "origin": "Botswana, Jwaneng",
+    "grade": "D / VVS1 / Excellent",
+    "cert": "GIA 6482910337",
+    "miner": "Debswana",
+    "weight_ct": 1.24,
+    "registered": "11 May 2026",
+    "trust_score": 94,
+    "tx_signature": "MOCK_cdf960a8760cca766fd451c8e12f5e123ecae516896d",
+    "payload_hash": "5e1d6396ebca4f7d2131717f74b28477fb87fbbaf92075ef0b1a4fa5bc8c5286",
+    "custody": [
+      {
+        "event": "Extracted & registered",
+        "location": "Jwaneng Mine, Botswana",
+        "actor": "Debswana",
+        "status": "done",
+        "tx": "MOCK_cdf960a8760cca766fd451c8e12f5e123ecae516896d",
+        "date": "11 May 2026"
+      },
+      {
+        "event": "Cut & polished",
+        "location": "Surat, India \u00b7 Kiran Gems",
+        "actor": "Kiran Gems",
+        "status": "done",
+        "tx": "MOCK_cdf960a8760cca766fd451c8e12f5e123ecae516896d",
+        "date": "11 May 2026"
+      },
+      {
+        "event": "GIA certified",
+        "location": "Antwerp, Belgium",
+        "actor": "GIA Lab",
+        "status": "done",
+        "tx": "MOCK_cdf960a8760cca766fd451c8e12f5e123ecae516896d",
+        "date": "11 May 2026"
+      },
+      {
+        "event": "With retailer",
+        "location": "Amsterdam \u00b7 Gassan Diamonds",
+        "actor": "Gassan Diamonds",
+        "status": "active",
+        "tx": "MOCK_cdf960a8760cca766fd451c8e12f5e123ecae516896d",
+        "date": "11 May 2026"
+      },
+      {
+        "event": "Consumer purchase",
+        "location": "",
+        "actor": "",
+        "status": "pending",
+        "tx": "MOCK_cdf960a8760cca766fd451c8e12f5e123ecae516896d",
+        "date": "11 May 2026"
+      }
+    ]
+  },
+  "DC-2026-BW-00002228C2": {
+    "id": "DC-2026-BW-00002228C2",
+    "name": "Round Brilliant \u00b7 1.24ct",
+    "origin": "Botswana, Jwaneng",
+    "grade": "D / VVS1 / Excellent",
+    "cert": "GIA 6482910337",
+    "miner": "Debswana",
+    "weight_ct": 1.24,
+    "registered": "11 May 2026",
+    "trust_score": 94,
+    "tx_signature": "MOCK_81fb2da059895ae9cc62acebd050ca77c3986f1c5803",
+    "payload_hash": "2f48fe3d7f6f3141a0312eec1fd400154ecf6b766c371f5723e01f0b38f693d2",
+    "custody": [
+      {
+        "event": "Extracted & registered",
+        "location": "Jwaneng Mine, Botswana",
+        "actor": "Debswana",
+        "status": "done",
+        "tx": "MOCK_81fb2da059895ae9cc62acebd050ca77c3986f1c5803",
+        "date": "11 May 2026"
+      },
+      {
+        "event": "Cut & polished",
+        "location": "Surat, India \u00b7 Kiran Gems",
+        "actor": "Kiran Gems",
+        "status": "done",
+        "tx": "MOCK_81fb2da059895ae9cc62acebd050ca77c3986f1c5803",
+        "date": "11 May 2026"
+      },
+      {
+        "event": "GIA certified",
+        "location": "Antwerp, Belgium",
+        "actor": "GIA Lab",
+        "status": "done",
+        "tx": "MOCK_81fb2da059895ae9cc62acebd050ca77c3986f1c5803",
+        "date": "11 May 2026"
+      },
+      {
+        "event": "With retailer",
+        "location": "Amsterdam \u00b7 Gassan Diamonds",
+        "actor": "Gassan Diamonds",
+        "status": "active",
+        "tx": "MOCK_81fb2da059895ae9cc62acebd050ca77c3986f1c5803",
+        "date": "11 May 2026"
+      },
+      {
+        "event": "Consumer purchase",
+        "location": "",
+        "actor": "",
+        "status": "pending",
+        "tx": "MOCK_81fb2da059895ae9cc62acebd050ca77c3986f1c5803",
+        "date": "11 May 2026"
+      }
+    ]
+  }
+}

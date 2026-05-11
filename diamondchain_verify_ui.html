@@ -1,0 +1,190 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+.dc{font-family:'DM Sans',sans-serif;padding:1.5rem 0;max-width:680px;}
+.dc-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:1rem;border-bottom:0.5px solid var(--color-border-tertiary);}
+.dc-brand{display:flex;align-items:center;gap:8px;}
+.dc-diamond{width:20px;height:20px;}
+.dc-logo{font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:var(--color-text-primary);}
+.dc-net{font-size:11px;font-family:'DM Mono',monospace;padding:2px 8px;border-radius:20px;background:var(--color-background-secondary);color:var(--color-text-tertiary);border:0.5px solid var(--color-border-tertiary);}
+.dc-hero{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;align-items:start;}
+.dc-passport{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem;}
+.dc-gem-wrap{display:flex;align-items:center;gap:12px;margin-bottom:1rem;padding-bottom:1rem;border-bottom:0.5px solid var(--color-border-tertiary);}
+.dc-gem-icon{width:40px;height:40px;background:#EEEDFE;border-radius:var(--border-radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.dc-gem-id{font-family:'DM Mono',monospace;font-size:11px;color:var(--color-text-tertiary);}
+.dc-gem-name{font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px;}
+.dc-verified{display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:2px 7px;border-radius:20px;background:#E1F5EE;color:#0F6E56;border:0.5px solid #5DCAA5;margin-top:4px;}
+.dc-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:0.5px solid var(--color-border-tertiary);}
+.dc-row:last-child{border-bottom:none;}
+.dc-row-label{font-size:12px;color:var(--color-text-secondary);display:flex;align-items:center;gap:6px;}
+.dc-row-val{font-size:12px;font-family:'DM Mono',monospace;color:var(--color-text-primary);text-align:right;}
+.dc-score-wrap{background:#EEEDFE;border-radius:var(--border-radius-md);padding:0.75rem;margin-top:0.75rem;display:flex;align-items:center;justify-content:space-between;}
+.dc-score-label{font-size:11px;color:#534AB7;}
+.dc-score-num{font-size:22px;font-weight:500;font-family:'DM Mono',monospace;color:#3C3489;}
+.dc-score-bar-wrap{flex:1;margin:0 12px;height:4px;background:#AFA9EC;border-radius:2px;}
+.dc-score-bar{height:4px;background:#534AB7;border-radius:2px;width:94%;}
+.dc-qr-side{display:flex;flex-direction:column;gap:0.75rem;}
+.dc-qr-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem;display:flex;flex-direction:column;align-items:center;gap:0.75rem;}
+.dc-qr-label{font-size:11px;color:var(--color-text-tertiary);font-family:'DM Mono',monospace;letter-spacing:0.05em;}
+.dc-qr-box{width:100px;height:100px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);display:flex;align-items:center;justify-content:center;background:var(--color-background-secondary);}
+.dc-qr-id{font-family:'DM Mono',monospace;font-size:10px;color:var(--color-text-secondary);word-break:break-all;text-align:center;}
+.dc-chain-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem;}
+.dc-section-label{font-size:11px;font-family:'DM Mono',monospace;color:var(--color-text-tertiary);letter-spacing:0.06em;margin-bottom:0.75rem;}
+.dc-timeline{display:flex;flex-direction:column;gap:0;}
+.dc-step{display:flex;gap:12px;padding:0.6rem 0;}
+.dc-step-dot-col{display:flex;flex-direction:column;align-items:center;width:16px;flex-shrink:0;}
+.dc-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.dc-dot.done{background:#1D9E75;}
+.dc-dot.active{background:#534AB7;box-shadow:0 0 0 3px #EEEDFE;}
+.dc-dot.pending{background:var(--color-border-secondary);}
+.dc-line{flex:1;width:1px;background:var(--color-border-tertiary);}
+.dc-step-content{flex:1;padding-bottom:4px;}
+.dc-step-title{font-size:13px;font-weight:500;color:var(--color-text-primary);}
+.dc-step-meta{font-size:11px;color:var(--color-text-tertiary);font-family:'DM Mono',monospace;margin-top:2px;}
+.dc-step-loc{font-size:11px;color:var(--color-text-secondary);margin-top:1px;}
+.dc-tx-hash{font-family:'DM Mono',monospace;font-size:10px;color:var(--color-text-tertiary);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;}
+.dc-btn-row{display:flex;gap:8px;margin-top:1rem;}
+.dc-btn-primary{flex:1;padding:9px;border-radius:var(--border-radius-md);background:#534AB7;color:white;border:none;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+.dc-btn-secondary{padding:9px 14px;border-radius:var(--border-radius-md);background:transparent;color:var(--color-text-secondary);border:0.5px solid var(--color-border-secondary);font-size:13px;font-family:'DM Sans',sans-serif;cursor:pointer;}
+</style>
+
+<h2 class="sr-only">DiamondChain passport verification UI mockup for a 1.24ct diamond from Botswana</h2>
+
+<div class="dc">
+  <div class="dc-nav">
+    <div class="dc-brand">
+      <svg class="dc-diamond" viewBox="0 0 20 20" fill="none">
+        <polygon points="10,2 18,8 10,18 2,8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+        <polygon points="10,2 18,8 10,10 2,8" fill="#AFA9EC" stroke="#534AB7" stroke-width="0.5"/>
+      </svg>
+      <span class="dc-logo">DiamondChain</span>
+    </div>
+    <span class="dc-net">devnet</span>
+  </div>
+
+  <div class="dc-hero">
+    <div class="dc-passport">
+      <div class="dc-gem-wrap">
+        <div class="dc-gem-icon">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
+            <polygon points="10,2 18,8 10,18 2,8" fill="#AFA9EC" stroke="#534AB7" stroke-width="0.8"/>
+            <polygon points="10,2 18,8 10,10 2,8" fill="#534AB7" stroke="#534AB7" stroke-width="0.5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="dc-gem-name">Round Brilliant · 1.24ct</div>
+          <div class="dc-gem-id">DC-2025-BW-00441</div>
+          <div class="dc-verified"><i class="ti ti-check" style="font-size:11px;" aria-hidden="true"></i> on-chain verified</div>
+        </div>
+      </div>
+
+      <div class="dc-row">
+        <span class="dc-row-label"><i class="ti ti-map-pin" style="font-size:14px;" aria-hidden="true"></i>Origin</span>
+        <span class="dc-row-val">Botswana, Jwaneng</span>
+      </div>
+      <div class="dc-row">
+        <span class="dc-row-label"><i class="ti ti-sparkles" style="font-size:14px;" aria-hidden="true"></i>Grade</span>
+        <span class="dc-row-val">D / VVS1 / Excellent</span>
+      </div>
+      <div class="dc-row">
+        <span class="dc-row-label"><i class="ti ti-file-certificate" style="font-size:14px;" aria-hidden="true"></i>Cert</span>
+        <span class="dc-row-val">GIA 6482910337</span>
+      </div>
+      <div class="dc-row">
+        <span class="dc-row-label"><i class="ti ti-calendar" style="font-size:14px;" aria-hidden="true"></i>Registered</span>
+        <span class="dc-row-val">14 Apr 2025</span>
+      </div>
+      <div class="dc-row">
+        <span class="dc-row-label"><i class="ti ti-building-factory" style="font-size:14px;" aria-hidden="true"></i>Miner</span>
+        <span class="dc-row-val">Debswana · trust 97</span>
+      </div>
+
+      <div class="dc-score-wrap">
+        <span class="dc-score-label">Trust score</span>
+        <div class="dc-score-bar-wrap"><div class="dc-score-bar"></div></div>
+        <span class="dc-score-num">94</span>
+      </div>
+    </div>
+
+    <div class="dc-qr-side">
+      <div class="dc-qr-card">
+        <span class="dc-qr-label">scan to verify</span>
+        <div class="dc-qr-box">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <rect x="4" y="4" width="28" height="28" rx="2" fill="none" stroke="var(--color-border-primary)" stroke-width="3"/>
+            <rect x="10" y="10" width="16" height="16" rx="1" fill="var(--color-text-secondary)"/>
+            <rect x="48" y="4" width="28" height="28" rx="2" fill="none" stroke="var(--color-border-primary)" stroke-width="3"/>
+            <rect x="54" y="10" width="16" height="16" rx="1" fill="var(--color-text-secondary)"/>
+            <rect x="4" y="48" width="28" height="28" rx="2" fill="none" stroke="var(--color-border-primary)" stroke-width="3"/>
+            <rect x="10" y="54" width="16" height="16" rx="1" fill="var(--color-text-secondary)"/>
+            <rect x="48" y="48" width="6" height="6" fill="var(--color-text-secondary)"/>
+            <rect x="56" y="48" width="6" height="6" fill="var(--color-text-secondary)"/>
+            <rect x="64" y="48" width="6" height="6" fill="var(--color-text-secondary)"/>
+            <rect x="48" y="56" width="6" height="6" fill="var(--color-text-secondary)"/>
+            <rect x="64" y="56" width="6" height="6" fill="var(--color-text-secondary)"/>
+            <rect x="56" y="64" width="6" height="6" fill="var(--color-text-secondary)"/>
+            <rect x="64" y="64" width="6" height="6" fill="var(--color-text-secondary)"/>
+          </svg>
+        </div>
+        <span class="dc-qr-id">diamondchain.xyz/verify/DC-2025-BW-00441</span>
+      </div>
+
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.75rem;">
+        <div style="font-size:11px;color:var(--color-text-tertiary);font-family:'DM Mono',monospace;margin-bottom:4px;">solana tx</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--color-text-secondary);word-break:break-all;line-height:1.5;">4xK9mPqR...nW2vBz8T</div>
+        <div style="margin-top:6px;display:flex;align-items:center;gap:5px;"><div style="width:6px;height:6px;border-radius:50%;background:#1D9E75;flex-shrink:0;"></div><span style="font-size:11px;color:#0F6E56;">confirmed · slot 284,910,337</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dc-chain-card">
+    <div class="dc-section-label">chain of custody</div>
+    <div class="dc-timeline">
+      <div class="dc-step">
+        <div class="dc-step-dot-col"><div class="dc-dot done"></div><div class="dc-line"></div></div>
+        <div class="dc-step-content">
+          <div class="dc-step-title">Extracted & registered</div>
+          <div class="dc-step-loc">Jwaneng Mine, Botswana · Debswana</div>
+          <div class="dc-step-meta">02 Jan 2025 · tx 3aR7...f9Kp</div>
+        </div>
+      </div>
+      <div class="dc-step">
+        <div class="dc-step-dot-col"><div class="dc-dot done"></div><div class="dc-line"></div></div>
+        <div class="dc-step-content">
+          <div class="dc-step-title">Cut & polished</div>
+          <div class="dc-step-loc">Surat, India · Kiran Gems</div>
+          <div class="dc-step-meta">18 Feb 2025 · tx 8nW2...m1Qz</div>
+        </div>
+      </div>
+      <div class="dc-step">
+        <div class="dc-step-dot-col"><div class="dc-dot done"></div><div class="dc-line"></div></div>
+        <div class="dc-step-content">
+          <div class="dc-step-title">GIA certified</div>
+          <div class="dc-step-loc">Antwerp, Belgium · GIA Lab</div>
+          <div class="dc-step-meta">05 Mar 2025 · tx 2pL4...k8Xv</div>
+        </div>
+      </div>
+      <div class="dc-step">
+        <div class="dc-step-dot-col"><div class="dc-dot active"></div><div class="dc-line" style="opacity:0.3;"></div></div>
+        <div class="dc-step-content">
+          <div class="dc-step-title">With retailer</div>
+          <div class="dc-step-loc">Amsterdam, Netherlands · Gassan Diamonds</div>
+          <div class="dc-step-meta">14 Apr 2025 · tx 4xK9...nW2v</div>
+        </div>
+      </div>
+      <div class="dc-step">
+        <div class="dc-step-dot-col"><div class="dc-dot pending"></div></div>
+        <div class="dc-step-content" style="opacity:0.4;">
+          <div class="dc-step-title">Consumer purchase</div>
+          <div class="dc-step-meta">pending</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dc-btn-row">
+    <button class="dc-btn-primary" onclick="sendPrompt('Give me the Python code to register a diamond and generate this passport on Solana devnet')">Generate Python backend ↗</button>
+    <button class="dc-btn-secondary" onclick="sendPrompt('How do I generate the QR code that links to this verify page?')">QR setup ↗</button>
+  </div>
+</div>
